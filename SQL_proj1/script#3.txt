@@ -1,0 +1,11 @@
+select hobby,address
+	from users,hobby
+	where hobby.email=users.email and hobby.hobby= 'swimming' 
+	union
+	select hobby,address
+	from users,hobby
+	where hobby.email=users.email and hobby.hobby= 'dancing' 
+	order by hobby
+
+	
+

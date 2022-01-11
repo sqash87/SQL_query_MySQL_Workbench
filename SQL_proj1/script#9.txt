@@ -1,0 +1,4 @@
+	select name as vendor_name, email as ambassador_email, count(distinct follower) as ambassador_follower
+	from vendor, follow, vendor_ambassador
+	where vendor.id= vendor_ambassador.vendorid and vendor_ambassador.email= follow.followee 
+	group by email, name

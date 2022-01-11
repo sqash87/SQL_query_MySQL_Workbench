@@ -1,0 +1,7 @@
+select email, description
+	from vendor_ambassador, vendor_topics, topic
+	where vendor_ambassador.vendorid=vendor_topics.vendorid 
+	and vendor_topics.topicid=topic.id
+
+	
+

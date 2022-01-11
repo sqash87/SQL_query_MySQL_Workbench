@@ -1,0 +1,6 @@
+select email, min(sentiment) as min_sentiment, max(sentiment) as max_sentiment, avg(confidence) as avg_confidence
+	from blurt_analysis
+	group by email
+	order by avg_confidence desc
+
+

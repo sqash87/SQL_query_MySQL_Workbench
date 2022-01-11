@@ -1,0 +1,9 @@
+select U.email, U.password, U.name, U.date_of_birth
+
+from users as U, celebrity as C
+
+where U.email= C.email and C.kind = 'MovieStar'
+
+and U.email not in (select email
+		   from celebrity as C1, follow as F1
+		   where C1.email=F1.follower);

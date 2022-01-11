@@ -1,0 +1,6 @@
+select text,confidence
+	from blurt, blurt_analysis
+	where blurt.blurtid=blurt_analysis.blurtid and blurt.text like 'I am reaching%'
+
+	
+

@@ -1,0 +1,7 @@
+
+	select name, address
+	from users
+	where (select right (date_of_birth,4) between 1970 and 1990
+		from users as U1
+        where U1.email=users.email)
+
